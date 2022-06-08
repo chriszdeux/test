@@ -1,0 +1,128 @@
+@mixin btn-color($color, $hover){
+    background-color: $color;
+    transition: .3s ease;
+    color: $ligh-gray-color;
+    &:hover {
+        background-color: $hover;
+    }
+}
+@mixin btn-default($color, $hoverm, $text-color){
+    display: flex;
+    width: 16rem;
+    height: 5rem;
+    background-color: $color;
+    transition: .3s ease;
+    color: $text-color;
+    &:hover span {
+        text-decoration: underline;
+    }
+
+    .figure {
+        margin-right: .5rem;
+    }
+}
+
+@mixin dropdown {
+    position:absolute;
+    left: 0;
+    bottom: -5rem;
+    width: 25.5rem;
+    height: 19.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 4rem -.7rem rgba(55, 63, 104, 0.44);
+    overflow: hidden;
+    li {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: $regular-font;
+        padding: 1rem;
+        color: $dark-blue-color;
+        border-bottom: 1px solid $dark-blue-color;
+        &:hover {
+            color: $purple-color;
+        }
+        .selected {
+            color: $purple-color
+        }
+    }
+}
+
+.btn {
+    width: 15rem;
+    height: 4.5rem;
+    border-radius: 1rem;
+    color: $gray-color;
+    border: none;
+    outline: none;
+}
+
+
+.purple {
+    @include btn-color($purple-color, $purple-hover-color);
+}
+
+.blue{
+    @include btn-color($blue-color, $blue-hover-color );
+}
+
+.dark-blue{
+    @include btn-color($dark-blue-color, $dark-blue-hover-color);
+}
+
+.red{
+    @include btn-color($red-color, $red-hover-color);
+}
+
+.default-1 {
+    @include btn-default($gray-color, $gray-color, $dark-gray-color);
+}
+.default-2 {
+    @include btn-default($gray-color, $gray-color, $white-color);
+}
+
+@mixin btn-interactive($width, $height, $color) {
+
+    width: $width;
+    height: $height;
+    background-color: $gray-color;
+    font-size: 1.3rem;
+    color: $color;
+    border-radius: 1rem;
+    padding: 1rem;
+    
+    &:hover {
+        background-color: $dark-gray-color;
+    }
+    
+    &:active {
+        background-color: $blue-color;
+        color: $ligh-gray-color;
+    }
+
+
+}
+
+.interractive-1 {
+    @include btn-interactive(4rem, 5.3rem, $gray-color);
+    display: grid;
+}
+.interractive-2 {
+    @include btn-interactive(4.8rem, 3rem, $blue-color);
+}
+
+.interactive-3 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 19.4rem;
+    height: 7.2rem;
+    background-color: $dark-blue-color;
+    color: $ligh-gray-color;
+
+    
+    ul {
+        @include dropdown();
+    }
+}

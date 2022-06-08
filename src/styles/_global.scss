@@ -1,0 +1,38 @@
+@mixin titles($size, $line, $spacing) {
+    font-size: $size;
+    font-weight: $font-weight-bold;
+    line-height:$line;
+    word-spacing: $spacing;
+}
+
+@mixin text($size, $line) {
+    font-size: $size;
+    font-weight: $font-weight-regular;
+    line-height:$line;
+}
+
+
+h1 {
+    @include titles($jumbo-font, 3.5rem, -.33rem);
+}
+h2 {
+    @include titles($extra-large-font, 2.9rem, -.25rem);
+}
+h3 {
+    @include titles($large-font, 2.6rem, -.25rem);
+}
+h4 {
+    @include titles($large-font, 2rem, -.2rem);
+}
+
+.text--1 {
+    @include text($regular-font, 2.3rem);
+}
+
+.text--2 {
+    @include text(1.5rem, 2.2rem);
+}
+.text--3 {
+    @include text(1.3rem, 1.9rem);
+    font-weight: $font-weight-semibold;
+}

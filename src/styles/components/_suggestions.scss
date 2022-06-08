@@ -1,0 +1,24 @@
+.suggestions {
+  width: 24rem;
+  height: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  .suggestions__list {
+    width: 22rem;
+    height: 18rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    border-radius: 1rem;
+
+    li {
+      min-width: 4.8rem;
+      height: 3rem;
+      color: $blue-color;
+      background-color: $ligh-gray-color;
+      border-radius: 1rem;
+    }
+  }
+}

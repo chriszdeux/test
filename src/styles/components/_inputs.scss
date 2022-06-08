@@ -1,0 +1,35 @@
+.text-input {
+    position: relative;
+    width: 25.5rem;
+    height: 4.8rem;  
+    background-color: $ligh-gray-color;  
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    text-align: start;
+    padding: 0 1rem;
+
+    &:active {
+        outline: 1px solid $blue-color;
+    }
+    &:invalid {
+        outline: 1px solid $red-color;
+    }
+    &:invalid {
+        outline: 1px solid $red-color;
+    }
+
+}
+
+.input-error {
+    position: absolute;
+    left: 0;
+    bottom: .5rem;
+    color: $red-color;
+}
+
+.input-dropdown {
+    @include dropdown();
+    &:active {
+        outline: 1px solid $blue-color;
+    }
+}
