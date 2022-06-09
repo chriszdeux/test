@@ -8,6 +8,8 @@ export const RoadmapBySections = ({text}) => {
 
       <div className='list__roadmap__cards'>
         <RoadmapCard />
+        <RoadmapCard />
+        <RoadmapCard />
       </div>
     </div>
   )

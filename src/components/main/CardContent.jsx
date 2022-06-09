@@ -1,11 +1,12 @@
 import React from 'react'
 
-export const CardContent = () => {
+export const CardContent = ({post}) => {
+  const { description, category, title } = post
   return (
     <div className='content'>
-      <h4>Add tag for solution</h4>
-      <p className='text--2'>Thi sis a comment lorem  </p>
-      <button className='btn default--1'>Enhancement</button>
+      <h4>{ title }</h4>
+      <p className='text--2'>{ description }</p>
+      <button className='btn default--1'>{ category }</button>
     </div>
   )
 }

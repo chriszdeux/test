@@ -2,12 +2,11 @@ import React from 'react'
 import { CardContent } from './CardContent'
 import { CardInteraction } from './CardInteraction'
 
-export const FeedbackCard = () => {
-
+export const FeedbackCard = ({ post }) => {
   return (
     <article className='main__card'>
-      <CardContent />
-      <CardInteraction />
+      <CardContent post={ post }/>
+      <CardInteraction post={ post }/>
     </article>
   )
 }
