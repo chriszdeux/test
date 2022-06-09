@@ -1,5 +1,6 @@
 import React from 'react'
 import { icons } from '../../constants/assets'
+import { AddFeedbackButton } from './AddFeedbackButton'
 
 export const ShortBy = () => {
   const { down_arrow_icon, plus_icon, sugg } = icons
@@ -11,12 +12,7 @@ export const ShortBy = () => {
             <img src={ down_arrow_icon } alt="down" />
           </figure>
       </div>
-      <button className='btn purple text--3 btn__add__feedback'>
-        <figure>
-          <img src={ plus_icon } alt="plus" />
-        </figure>
-        Add Feedback
-      </button>
+      <AddFeedbackButton />
     </div>
   )
 }
