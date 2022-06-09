@@ -1129,4 +1129,121 @@ textarea::placeholder {
   margin: 1rem 0;
   font-weight: 600;
 }
+
+.header__roadmap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #373F68;
+  height: 10rem;
+  padding: 1rem;
+}
+
+.header__roadmap .roadmap__back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.header__roadmap .roadmap__back .btn {
+  background-color: #373F68;
+  color: #F7F8FD;
+  font-size: 1.6rem;
+  width: 10rem;
+  height: 2.5rem;
+}
+
+.header__roadmap .roadmap__back .btn figure {
+  margin-right: 2rem;
+}
+
+.header__roadmap .roadmap__back h2 {
+  color: #F7F8FD;
+}
+
+.select__roadmap {
+  width: 100%;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #F2F4FF;
+}
+
+.select__roadmap li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33.3%;
+  height: inherit;
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: .6;
+}
+
+.select__roadmap .active {
+  font-weight: 600;
+  border-bottom: 2px solid #AD1FEA;
+  opacity: 1;
+}
+
+.roadmap__column {
+  padding: 2rem;
+}
+
+.roadmap__column h2 {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+.roadmap__column .list__roadmap__cards .roadmap__card {
+  border-top: 5px solid #AD1FEA;
+  border-radius: .5rem;
+  padding: 2rem 1rem;
+}
+
+.roadmap__column .list__roadmap__cards .roadmap__card .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.roadmap__column .list__roadmap__cards .roadmap__card .status div {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: #AD1FEA;
+}
 /*# sourceMappingURL=index.css.map */

@@ -6,6 +6,7 @@ import { MainFeedback } from "./components/main";
 import { FeedbackDetails } from "./components/main/FeedbackDetails";
 import { NewFeedback } from "./components/main/NewFeedback";
 import { NoFeedback } from "./components/main/NoFeedback";
+import { RoadMapScreen } from "./components/roadmap/index.jsx";
 import { Suggestions } from "./components/suggestions";
 
 
@@ -18,7 +19,8 @@ function App() {
       {/* <NoFeedback /> */}
       {/* <FeedbackDetails /> */}
       {/* <NewFeedback /> */}
-      <EditFeedback />
+      {/* <EditFeedback /> */}
+      <RoadMapScreen />
     </div>
   );
 }
