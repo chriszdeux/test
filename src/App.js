@@ -24,8 +24,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ShortBy />
-      <MainFeedback />
+      {/* <ShortBy /> */}
+      {/* <MainFeedback /> */}
       {/* <NoFeedback /> */}
       {/* <FeedbackDetails /> */}
       {/* <NewFeedback /> */}

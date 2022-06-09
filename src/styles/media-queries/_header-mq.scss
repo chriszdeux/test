@@ -1,0 +1,49 @@
+@media only screen and ( min-width: 768px ) {
+
+  .header {
+    background: none;
+  }
+  .tablet__header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    color: $white-color;
+
+    .company {
+      width: 22.3rem;
+      height: 17.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-image: url("../../assets/suggestions/tablet/background-header.png");
+      background-repeat: no-repeat;
+      border-radius: 1rem;
+    }
+    
+    .suggestions__list {
+      width: 22.3rem;
+      height: 17.8rem;
+      margin: 0;
+    }
+
+    .roadmap {
+      padding: 1rem;
+      width: 22.3rem;
+      height: 17.8rem;
+
+      .roadmap__header {
+      }
+      .roadmap__list {
+        li {
+          margin: 0;
+          margin-bottom: .5rem;
+        }
+      }
+    }
+  }
+
+  .mobile__header {
+    display: none;
+  }
+}
