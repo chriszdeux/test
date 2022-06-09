@@ -95,6 +95,9 @@
 .dark-blue{
     @include btn-color($dark-blue-color, $dark-blue-hover-color);
 }
+.heavy-blue{
+    @include btn-color($heavy-blue-color, $dark-blue-hover-color);
+}
 
 .red{
     @include btn-color($red-color, $red-hover-color);

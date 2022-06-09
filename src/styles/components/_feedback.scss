@@ -90,6 +90,7 @@
   }
 }
 
+
 .feedback__details {
   width: 100%;
   height: 100%;
@@ -97,27 +98,6 @@
   background-color: $ligh-gray-color;
   display: flex;
   flex-direction: column;
-  .feedback__header {
-    @include display-flex-center(space-between);
-    margin-bottom: 2rem;
-    .default--1 {
-      width: 10rem;
-      background-color: $ligh-gray-color;
-      // font-size: $regular-font;
-      font-size: $extra-small-font;
-      font-weight: $font-weight-bold;
-      figure {
-        margin-right: 2rem;
-      }
-    }
-
-    .blue {
-      width: 12rem;
-      height: 4rem;
-      font-size: $extra-small-font;
-      font-weight: $font-weight-semibold;
-    }
-  }
   .main__card {
     // padding: 0;
     width: 100%;
@@ -190,4 +170,30 @@
       }
     }
   }
+}
+
+.feedback__header {
+  @include display-flex-center(space-between);
+  margin-bottom: 2rem;
+  .default--1 {
+    width: 10rem;
+    background-color: $ligh-gray-color;
+    // font-size: $regular-font;
+    font-size: $extra-small-font;
+    font-weight: $font-weight-bold;
+    figure {
+      margin-right: 2rem;
+    }
+  }
+
+  .blue {
+    width: 12rem;
+    height: 4rem;
+    font-size: $extra-small-font;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.new__feedback {
+  background-color: $ligh-gray-color;
 }
