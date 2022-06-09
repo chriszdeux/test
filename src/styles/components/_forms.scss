@@ -1,0 +1,19 @@
+.comment__form {
+  padding: 2rem;
+  background-color: $white-color;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  textarea {
+    width: 100%;
+    min-height: 8rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+}

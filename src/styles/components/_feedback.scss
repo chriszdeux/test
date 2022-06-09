@@ -16,7 +16,7 @@
   height: 20rem;
   background-color: $white-color;
   padding: 2rem;
-
+  border-radius: 1rem;
   .content {
     width: 29.5rem;
     height: 10rem;
@@ -85,6 +85,108 @@
         width: inherit;
         height: inherit;
         object-fit: cover;
+      }
+    }
+  }
+}
+
+.feedback__details {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  background-color: $ligh-gray-color;
+  display: flex;
+  flex-direction: column;
+  .feedback__header {
+    @include display-flex-center(space-between);
+    margin-bottom: 2rem;
+    .default--1 {
+      width: 10rem;
+      background-color: $ligh-gray-color;
+      // font-size: $regular-font;
+      font-size: $extra-small-font;
+      font-weight: $font-weight-bold;
+      figure {
+        margin-right: 2rem;
+      }
+    }
+
+    .blue {
+      width: 12rem;
+      height: 4rem;
+      font-size: $extra-small-font;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  .main__card {
+    // padding: 0;
+    width: 100%;
+  }
+  
+  .comments {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    background-color: $white-color;
+    border-radius: 1rem;
+    margin-top: 3rem;
+
+    .comment__count {
+      margin-bottom: 2rem;
+    }
+    .comment__card {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid $gray-color;
+      padding-bottom: 2rem;
+      .comment__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        .comment__user {
+          display: flex;
+  
+          figure {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1rem;
+            img {
+              width: inherit;
+              height: inherit;
+              border-radius: 50%;
+            }
+          }
+
+          h4 {
+            display: grid;
+          }
+        }
+  
+        .default--1 {
+          font-weight: $font-weight-semibold;
+          background-color: $white-color;
+          color: $blue-color;
+          width: 8rem;
+        }
+      }
+
+      p {
+        strong {
+          margin-right: 1rem;
+          color: $purple-color;
+        }
+      }
+    }
+
+    .comment__replys {
+      margin-top: 2rem;
+      .reply {
+        &:nth-child(1) {
+          border-left: 2px solid $gray-color;
+        }
+        padding-left: 2rem;
+        border: none;
       }
     }
   }

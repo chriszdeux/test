@@ -14,6 +14,21 @@
     // color: $heavy-blue-color;
 }
 
+@mixin  inputs {
+    border: none;
+    outline: none;
+    background-color: $ligh-gray-color;
+    text-decoration: none;
+    resize: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: $dark-gray-color;
+    font-size: $extra-small-font;
+    &::placeholder {
+        color: $dark-gray-color;
+        opacity: .5;
+    }
+}
 
 @mixin display-flex($justify, $align) {
     display: flex;
@@ -49,4 +64,12 @@ h4 {
 .text--3 {
     @include text(1.3rem, 1.9rem);
     font-weight: $font-weight-semibold;
+}
+
+input {
+   @include inputs(); 
+}
+
+textarea {
+    @include inputs(); 
 }
