@@ -1,3 +1,5 @@
+
+import { EditFeedback } from "./components/forms/EditFeedback.jsx";
 import { Header } from "./components/header";
 import { ShortBy } from "./components/header/ShortBy";
 import { MainFeedback } from "./components/main";
@@ -15,7 +17,8 @@ function App() {
       {/* <MainFeedback /> */}
       {/* <NoFeedback /> */}
       {/* <FeedbackDetails /> */}
-      <NewFeedback />
+      {/* <NewFeedback /> */}
+      <EditFeedback />
     </div>
   );
 }
