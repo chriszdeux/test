@@ -1,24 +1,89 @@
 .suggestions {
   width: 24rem;
-  height: 40rem;
+  max-height: 40rem;
   display: flex;
   flex-wrap: wrap;
+  
+}
 
-  .suggestions__list {
-    width: 22rem;
-    height: 18rem;
+.suggestions__list {
+  background-color: $white-color;
+
+  width: 22rem;
+  height: 18rem;
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  li {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-shrink: 0;
+    align-items: center;
+    // max-width: 8.8rem;
+    height: 3rem;
+    color: $blue-color;
+    padding: 1rem;
+    margin-right: .3rem;
+    background-color: $gray-color;
     border-radius: 1rem;
+    font-size: $small-font;
+    // border: 1px solid red;
+    transition: .3s linear;
+    cursor: pointer;
+    &:active {
+      background-color: $blue-color;
+      color: $ligh-gray-color;
+    }
+  }
+}
 
-    li {
-      min-width: 4.8rem;
-      height: 3rem;
+.roadmap {
+  width: 22rem;
+  min-height: 18rem;
+  border-radius: 1rem;
+  padding: 3rem;
+  background-color: $white-color;
+
+  .roadmap__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    h2 {
+      color: $heavy-blue-color;
+    }
+
+    h3 {
       color: $blue-color;
-      background-color: $ligh-gray-color;
-      border-radius: 1rem;
+      text-decoration: underline;
+    }
+    
+  }
+
+  .roadmap__list {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 4.8rem;
+      height: 2.3rem;
+      margin: 2rem 0;
+      color: $dark-blue-color;
+      p {
+        display: flex;
+        align-items: center;
+
+        strong {
+          width: 1rem;
+          height: 1rem;
+          background-color: $purple-color;
+          border-radius: 50%;
+          margin-right: 2rem;
+        }
+      }
     }
   }
 }

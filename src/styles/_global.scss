@@ -22,7 +22,7 @@ h3 {
     @include titles($large-font, 2.6rem, -.25rem);
 }
 h4 {
-    @include titles($large-font, 2rem, -.2rem);
+    @include titles($small-font, 2rem, -.2rem);
 }
 
 .text--1 {
