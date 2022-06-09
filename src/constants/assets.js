@@ -10,6 +10,7 @@ import Plus from '../assets/shared/icon-plus.svg';
 import Close from '../assets/shared/mobile/icon-close.svg';
 import Menu from '../assets/shared/mobile/icon-hamburger.svg';
 import MobileBackground from '../assets/suggestions/mobile/background-header.png';
+import Suggestion from '../assets/suggestions/icon-suggestions.svg'
 export const icons = {
     down_arrow_icon: DownArrow ,
     left_arrow_icon: LeftArrow,
@@ -21,6 +22,7 @@ export const icons = {
     plus_icon: Plus,
     close_icon: Close,
     menu_icon: Menu,
+    suggestion_icon: Suggestion,
 }
 
 export const background_images = {

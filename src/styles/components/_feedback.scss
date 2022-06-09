@@ -1,0 +1,61 @@
+.feedback__section {
+  width: 100%;
+  height: auto;
+  display: grid;
+  gap: 1rem;
+  background-color: $ligh-gray-color;
+  padding: 3rem;
+}
+
+.main__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // @include display-flex($center)
+  width: 32.7rem;
+  height: 20rem;
+  background-color: $white-color;
+  padding: 2rem;
+
+  .content {
+    width: 29.5rem;
+    height: 10rem;
+    h4 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      width: 11rem;
+      height: 3.5rem;
+      font-weight: $font-weight-semibold;
+      color: $blue-color;
+      font-size: $extra-small-font;
+    }
+  }
+  .card__interaction {
+    @include display-flex-center(space-between);
+    .votes {
+      @include display-flex-center(center);
+      width: 7rem;
+      height: 3.2rem;
+      color: $heavy-blue-color;
+      font-weight: $font-weight-semibold;
+      figure {
+        // width: 1rem;
+        // height: 1rem;
+        margin-right: 1rem;
+      }
+      
+    }
+    .comments__counter {
+      @include display-flex-center(center);
+      font-size: $extra-small-font;
+      font-weight: $font-weight-semibold;
+      figcaption {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

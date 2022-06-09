@@ -8,6 +8,8 @@
 }
 @mixin btn-default($color, $hoverm, $text-color){
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 16rem;
     height: 5rem;
     background-color: $color;
@@ -48,6 +50,30 @@
     }
 }
 
+@mixin btn-interactive($width, $height, $color) {
+
+    width: $width;
+    height: $height;
+
+    background-color: $gray-color;
+    font-size: 1.3rem;
+    color: $color;
+    border-radius: 1rem;
+    padding: 1rem;
+    
+    &:hover {
+        background-color: $dark-gray-color;
+    }
+    
+    &:active {
+        background-color: $blue-color;
+        color: $ligh-gray-color;
+    }
+
+
+}
+
+
 .btn {
     width: 15rem;
     height: 4.5rem;
@@ -74,34 +100,13 @@
     @include btn-color($red-color, $red-hover-color);
 }
 
-.default-1 {
+.default--1 {
     @include btn-default($gray-color, $gray-color, $dark-gray-color);
 }
 .default-2 {
     @include btn-default($gray-color, $gray-color, $white-color);
 }
 
-@mixin btn-interactive($width, $height, $color) {
-
-    width: $width;
-    height: $height;
-    background-color: $gray-color;
-    font-size: 1.3rem;
-    color: $color;
-    border-radius: 1rem;
-    padding: 1rem;
-    
-    &:hover {
-        background-color: $dark-gray-color;
-    }
-    
-    &:active {
-        background-color: $blue-color;
-        color: $ligh-gray-color;
-    }
-
-
-}
 
 .interractive-1 {
     @include btn-interactive(4rem, 5.3rem, $gray-color);
@@ -124,5 +129,25 @@
     
     ul {
         @include dropdown();
+    }
+}
+
+.btn__add__feedback {
+    width: 13.4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    figure {
+        width: 1rem;
+        height: 1rem;
+        margin-right: .5rem;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        img {
+            width: 1rem;
+            // height: 1rem;
+        }
     }
 }

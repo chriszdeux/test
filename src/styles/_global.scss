@@ -3,15 +3,29 @@
     font-weight: $font-weight-bold;
     line-height:$line;
     word-spacing: $spacing;
+    color: $heavy-blue-color;
 }
 
 @mixin text($size, $line) {
     font-size: $size;
     font-weight: $font-weight-regular;
     line-height:$line;
+    color: $dark-blue-color;
+    // color: $heavy-blue-color;
 }
 
 
+@mixin display-flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin display-flex-center($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+
+}
 h1 {
     @include titles($jumbo-font, 3.5rem, -.33rem);
 }
