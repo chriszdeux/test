@@ -1,6 +1,6 @@
 import React from 'react'
 import { CommentHeader } from './CommentHeader'
-import { CommentReplys } from './CommentReplys'
+import { CommentReplies } from './CommentReplies'
 
 export const CommentCard = ({ comment }) => {
   const { content, user, replies } = comment 
@@ -13,7 +13,7 @@ export const CommentCard = ({ comment }) => {
       </p>
       {
         replies &&
-      <CommentReplys replies={ replies }/>
+      <CommentReplies replies={ replies }/>
       }
     </article>
   )

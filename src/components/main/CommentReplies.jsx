@@ -1,10 +1,10 @@
 import React from 'react'
 import { ReplyCard } from './ReplyCard'
 
-export const CommentReplys = ({ replies }) => {
+export const CommentReplies= ({ replies }) => {
   // debugger
   return (
-    <div className='comment__replys'>
+    <div className='comment__replies'>
       {
         replies.length > 0 &&
         replies.map(reply => (
