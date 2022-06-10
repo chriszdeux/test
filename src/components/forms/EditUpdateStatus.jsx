@@ -1,6 +1,7 @@
 import React from 'react'
 import { icons } from '../../constants/assets'
 import { useOpen } from '../../hooks/useOpen'
+import { DropdownList } from './DropdownList'
 
 export const EditUpdateStatus = () => {
   const { isOpen, handleIsOpen } = useOpen()
@@ -15,11 +16,7 @@ export const EditUpdateStatus = () => {
         </figure>
         {
           isOpen &&
-          <ul className="category__select">
-            <li>Feature</li>
-            <li>Feature</li>
-            <li>Feature</li>
-          </ul>
+          <DropdownList />
         }
       </div>
 

@@ -1,10 +1,13 @@
 export const types = {
   storage_data: '[Storage] Data',
+  storage_add: '[Storage] Add',
   delete_data: '[Delete] Data',
+  clean_memory_feedback: '[Clean] Feedback',
+
+  select_feedback: '[Select] Beedback',
 
   comment_post: '[Comment] Post',
   reply_comment: '[Reply] Comment',
-
   vote: '[Vote]',
 
   add_new_feedback: '[Add] Feedback',

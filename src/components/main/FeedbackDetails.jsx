@@ -7,13 +7,8 @@ import { FeedbackCardSelected } from './FeedbackCardSelected'
 import { useSelector } from 'react-redux'
 
 export const FeedbackDetails = () => {
-  const dataStorage = useSelector(state => state.storage_reducer)
-  const { productRequests } = dataStorage.length > 0 && dataStorage[0]
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    setData(productRequests[4])
-  }, [  dataStorage ])
+  const data = useSelector(state => state.feedback_reducer)
+  
   return (
     <section className='feedback__details'>
       <FeedbackDetailsHeader />

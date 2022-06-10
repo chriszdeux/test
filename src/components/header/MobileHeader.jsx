@@ -18,7 +18,7 @@ export const MobileHeader = () => {
     </figure>
 
     {
-      isOpen && <Menu />
+      isOpen && <Menu handleIsOpen={ handleIsOpen }/>
     }
     </div>
   )

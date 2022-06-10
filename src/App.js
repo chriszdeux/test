@@ -1,28 +1,31 @@
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { filterBy } from "./actions/filterBy.js";
 import { storageData } from "./actions/storageData.js";
-import { useFilterBy } from "./hooks/useFilterBy.js";
+import { data_json } from "./constants/data_json.js";
+import { ContextData } from "./context/context.js";
 import { useGetData } from "./hooks/useGetData.js";
 
 import { RouterApp } from "./routes/Router.jsx";
-import { types } from "./types/types.js";
 
 
 export const App = () => {
+  const dispatch = useDispatch()
   const dataStored = useSelector(state => state.storage_reducer);
-  const filterRe = useSelector(state => state.filter_reducer);
 
+  useEffect(() => {
+    dataStored.length === 0 && dispatch(storageData(data_json.productRequests) )
+  }, [])
 
-
-  const {data, loading} = useGetData(dataStored)
+  const postRef = useRef()
   
   return (
     <div className="App">
-      {
-        loading ? <h1>Loading...</h1>  : <RouterApp />
-      }
+      <ContextData.Provider value={{
+        postRef
+      }}>
+        <RouterApp />
+      </ContextData.Provider>
     </div>
   );
 }

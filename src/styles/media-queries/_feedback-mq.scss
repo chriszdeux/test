@@ -86,3 +86,10 @@
     gap: 1rem;
   }
 }
+
+@media only screen and ( min-width: 1400px ) {
+  .feedback__details {
+    width: 80rem;
+    margin: 0 auto;
+  }
+}
