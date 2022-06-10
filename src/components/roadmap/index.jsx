@@ -10,6 +10,8 @@ export const RoadMapScreen = () => {
       <SelectRoadmap />
       <div className='by__columns'>
         <RoadmapBySections text="Features currently being developed"/>
+        <RoadmapBySections text="Features currently being developed"/>
+        <RoadmapBySections text="Features currently being developed"/>
       </div>
     </section>
   )

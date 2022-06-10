@@ -41,4 +41,48 @@
       width: 69rem;
     }
   }
+
+
+  .feedback {
+    width: 54rem;
+    height: 74.5rem;
+    position: absolute;
+    left: 50%;
+    top: 5rem;
+    transform: translateX(-50%);
+    // justify-content: center;
+  }
+  .actions__feedback__form {
+ 
+    padding-right: 2rem;
+    padding-left: 2rem;
+    .submit__buttons {
+      display: flex;
+      flex-direction: row-reverse;
+      
+      .purple {  
+        width: 14.4rem ;
+        height: 4.4rem;
+      }
+      .heavy-blue {  
+        width: 9.3rem;
+        height: 4.4rem;
+        margin-right: 2rem;
+      }
+      
+      .red {
+        width: 9.3rem;
+        height: 4.4rem;
+        position: absolute;
+        left: 2rem;
+      }
+      
+    }
+  }
+
+  .by__columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }

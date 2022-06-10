@@ -4,7 +4,7 @@ import { EditFeedbackForm } from './EditFeedbackForm'
 
 export const EditFeedback = () => {
   return (
-    <section className='feedback__section'>
+    <section className='feedback__section feedback'>
       <div className='feedback__header'>
         <GoBack />
       </div>

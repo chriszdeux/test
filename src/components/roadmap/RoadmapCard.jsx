@@ -8,7 +8,7 @@ export const RoadmapCard = () => {
         <div></div>
         <p className='text--2'>In Progress</p>
       </div>
-      <FeedbackCard />
+      {/* <FeedbackCard /> */}
     </div>
   )
 }
