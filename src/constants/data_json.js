@@ -1,4 +1,4 @@
-export const data = {
+export const data_json = {
   "currentUser": {
     "image": "./assets/user-images/image-zena.jpg",
     "name": "Zena Kelley",

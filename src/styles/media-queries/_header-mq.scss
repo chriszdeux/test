@@ -81,3 +81,16 @@
     }
   }
 }
+
+@media only screen and ( min-width: 1400px ) {
+  .tablet__header {
+    position: absolute;
+    left: -25rem;
+    margin-top: 8rem;
+    grid-template-columns: none;
+  }
+
+  .short {
+    margin-top: 0;
+  }
+}

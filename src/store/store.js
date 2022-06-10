@@ -3,15 +3,17 @@ import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
 import { storageReducer } from "../reducers/storageReducer";
+import { filterReducer } from "../reducers/filterReducer";
 
 
 const persistConfig = {
-  key: 'root',
+  key: 'main-root',
   storage,
 }
 
 const reducers = combineReducers({ 
-  storage_reducer: storageReducer
+  storage_reducer: storageReducer,
+  filter_reducer: filterReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers)
