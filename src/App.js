@@ -10,19 +10,14 @@ import { RouterApp } from "./routes/Router.jsx";
 import { types } from "./types/types.js";
 
 
-function App() {
-  const dispatch = useDispatch()
+export const App = () => {
   const dataStored = useSelector(state => state.storage_reducer);
   const filterRe = useSelector(state => state.filter_reducer);
 
 
 
-  const {data, loading} = useGetData()
-  // debugger
-  useEffect(() => {
-    dataStored.length === 0 && dispatch(storageData(data) )
-  }, [data])
-
+  const {data, loading} = useGetData(dataStored)
+  
   return (
     <div className="App">
       {

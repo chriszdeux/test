@@ -3,7 +3,7 @@ import { types } from "../types/types";
 const { filter_by, filter_all } = types
 
 export const filterReducer = ( state = [], action ) => {
-  debugger
+  // debugger
   switch (action.type) {
     case filter_all:
       return [{...action.payload.data}]
