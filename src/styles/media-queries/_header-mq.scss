@@ -4,10 +4,13 @@
     background: none;
   }
   .tablet__header {
+    width: 69rem;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1rem;
+    margin-top: 4rem;
+    // padding: 1rem;
     color: $white-color;
 
     .company {
@@ -28,7 +31,7 @@
     }
 
     .roadmap {
-      padding: 1rem;
+      padding: 2rem;
       width: 22.3rem;
       height: 17.8rem;
 
@@ -45,5 +48,36 @@
 
   .mobile__header {
     display: none;
+  }
+
+  .short {
+    width: 69rem;
+    margin: 0 auto;
+    margin-top: 15rem;
+
+    border-radius: 1rem;
+
+    .short__by {
+      width: 55%;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 1rem;
+      h2 {
+        display: revert;
+        color: $white-color;
+      }
+
+      .suggested--icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: revert;
+
+        img {
+          width: inherit;
+          height: inherit;
+        }
+      }
+
+    }
   }
 }

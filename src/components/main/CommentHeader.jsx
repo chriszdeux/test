@@ -1,16 +1,23 @@
-import React from 'react'
-import image from '../../assets/user-images/image-anne.jpg'
+import React, { lazy, useEffect, useState } from 'react'
+import image2 from '../../assets/user-images/image-jackson.jpg'
+export const CommentHeader = ({ user }) => {
+  const { image, name, username } = user;
 
-export const CommentHeader = () => {
+  const [cleanImage, setCleanImage] = useState()
+  useEffect(() => {
+    import(`../.${image}`).then(setCleanImage)
+  }, [image])
+  console.log(cleanImage)
+  debugger
   return (
     <div className='comment__header'>
       <div className='comment__user'>
         <figure>
-          <img src={ image } alt="profile" />
+          <img src={ cleanImage } />
         </figure>
         <h4>
-          Elija Moss
-          <span className='text--2'>@hexaong.power</span>
+          { name }
+          <span className='text--2'>{ username }</span>
         </h4>
       </div>
 

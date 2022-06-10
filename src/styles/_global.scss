@@ -54,6 +54,9 @@ h4 {
     @include titles($small-font, 2rem, -.2rem);
 }
 
+body {
+    background-color: $ligh-gray-color
+}
 .text--1 {
     @include text($regular-font, 2.3rem);
 }

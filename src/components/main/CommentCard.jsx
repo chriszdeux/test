@@ -2,14 +2,19 @@ import React from 'react'
 import { CommentHeader } from './CommentHeader'
 import { CommentReplys } from './CommentReplys'
 
-export const CommentCard = () => {
+export const CommentCard = ({ comment }) => {
+  const { content, user, replies } = comment 
+  // debugger
   return (
     <article className='comment__card'>
-      <CommentHeader />
+      <CommentHeader user={ user }/>
       <p className='text--1'>
-        Reprehenderit ullamco irure laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.
+        { content }
       </p>
-      <CommentReplys />
+      {
+        replies &&
+      <CommentReplys replies={ replies }/>
+      }
     </article>
   )
 }
