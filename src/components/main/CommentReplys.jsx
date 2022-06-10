@@ -5,7 +5,12 @@ export const CommentReplys = ({ replies }) => {
   // debugger
   return (
     <div className='comment__replys'>
-      <ReplyCard />      
+      {
+        replies.length > 0 &&
+        replies.map(reply => (
+          <ReplyCard reply={ reply }/>      
+        ))
+      }
     </div>
   )
 }

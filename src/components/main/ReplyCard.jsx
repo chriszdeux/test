@@ -1,13 +1,15 @@
 import React from 'react'
 import { CommentHeader } from './CommentHeader'
 
-export const ReplyCard = () => {
+export const ReplyCard = ({ reply }) => {
+  const { content, replyingTo, user } = reply
+  // debugger
   return (
     <article className='comment__card reply'>
-      {/* <CommentHeader /> */}
+      <CommentHeader user={ user }/>
       <p className='text--1'>
-        <strong>@replyto_has</strong>
-        Reprehenderit ullamco irure laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.re laborum non anim ullamco sunt tempor amet.
+        <strong>@{replyingTo}</strong>
+        { content }
       </p>
     </article>
   )
