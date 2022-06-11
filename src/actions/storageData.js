@@ -14,6 +14,21 @@ export const storageAdd = ( data ) => {
   }
 }
 
+
+export const addVote = ( data ) => {
+  return {
+    type: types.vote,
+    payload: data
+  }
+}
+
+export const removeVote = ( data ) => {
+  return {
+    type: types.vote_remove,
+    payload: data
+  }
+}
+
 export const cleanDataFeedback = ( data ) => {
   return {
     type: types.clean_memory_feedback,

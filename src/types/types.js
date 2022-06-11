@@ -8,7 +8,8 @@ export const types = {
 
   comment_post: '[Comment] Post',
   reply_comment: '[Reply] Comment',
-  vote: '[Vote]',
+  vote: '[Vote] Add',
+  vote_remove: '[Vote] Remove',
 
   add_new_feedback: '[Add] Feedback',
   edit_feedback: '[Edit] Feedback',

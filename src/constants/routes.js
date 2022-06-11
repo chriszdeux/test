@@ -2,6 +2,7 @@ import { EditFeedbackForm } from "../components/forms/EditFeedbackForm";
 import { Home } from "../components/main";
 import { FeedbackDetails } from "../components/main/FeedbackDetails";
 import { NewFeedback } from "../components/main/NewFeedback";
+import { RoadMapScreen } from "../components/roadmap";
 
 export const routes = [
   { 
@@ -28,5 +29,10 @@ export const routes = [
     page: 'Feedback',
     route: '/test/feedback',
     component: <FeedbackDetails /> 
+  },
+  { 
+    page: 'Roadmap',
+    route: '/test/roadmap',
+    component: <RoadMapScreen /> 
   },
 ]

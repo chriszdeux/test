@@ -5,7 +5,9 @@ const {
   storage_add,
   select_feedback,   
   comment_post,
-  reply_comment
+  reply_comment,
+  vote,
+  vote_remove
 } = types
 
 const currentUser = {
@@ -22,24 +24,27 @@ export const storageReducer = ( state = [], action ) => {
     case storage_data:
       return action.payload ;
     case storage_add:
-      // debugger
-      // const add_comment = {
-      //   user: currentUser,
-      //   content: 
-      // }
-      // debugger
-      const a = state.map(item => {
-        if(item.id === action.payload.id) {
-          debugger
-          return action.payload
-        } else {
-          // debugger
-          return item
-        }
+      return state.map(item => {
+        return item.id === action.payload.id ?action.payload : item
       })
-      // debugger
-      return a
-    default:
+
+      case vote:
+        return state.map(item => {
+          if(item.id === action.payload.id) {
+            return { ...action.payload, upvotes: action.payload.upvotes + 1, voted: true }
+          } else {
+            return item
+          }
+        })
+      case vote_remove:
+        return state.map(item => {
+          if(item.id === action.payload.id) {
+            return { ...action.payload, upvotes: action.payload.upvotes - 1, voted: false }
+          } else {
+            return item
+          }
+        })
+    default: 
       return state
   }
 }
