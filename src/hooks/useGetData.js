@@ -10,7 +10,6 @@ export const useGetData = () => {
   })
   const isMount = useRef(true)
 
-  console.log(data_json)
   useEffect(() => {
   setData({
       data: data_json,

@@ -5,13 +5,26 @@ export const useForm = () => {
     post: '',
     reply: '',
     detail: '',
-    title: ''
+    title_feedback: '',
+    categories: [
+      'ui',
+      'ux',
+      'enhancement',
+      'bug',
+      'feature',
+    ],
+    status: [
+      'planned',
+      'in-progess',
+      'live',
+    ]
   })
 
   const [charactersLeft, setCharactersLeft] = useState(250)
+
+
   const handleOnChange = (e) => {
     const { nativeEvent: { inputType }} = e
-    console.log(inputType)
     // debugger
     inputType === 'insertText' && charactersLeft >= 0
       ? setCharactersLeft( charactersLeft - 1 )

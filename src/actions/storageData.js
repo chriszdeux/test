@@ -35,3 +35,11 @@ export const cleanDataFeedback = ( data ) => {
     payload: data
   }
 }
+
+
+export const addNewFeedback = ( data ) => {
+  return {
+    type: types.add_new_feedback,
+    payload: data
+  }
+}

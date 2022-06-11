@@ -12,7 +12,6 @@ export const feedbackSelectReducer = ( state = {}, action ) => {
       return action.payload
 
       case comment_post:
-        debugger
         if(comments) {
           // debugger
           return {...state, comments: [...comments, { user: currentUser, id: random(), content: action.payload } ]}

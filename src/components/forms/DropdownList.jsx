@@ -1,11 +1,17 @@
 import React from 'react'
 
-export const DropdownList = () => {
+export const DropdownList = ({values}) => {
+  const { handleIsOpen, categories, setHandleCategory } = values
   return (
+    <>
     <ul className="category__select">
-      <li>Feature</li>
-      <li>Feature</li>
-      <li>Feature</li>
+      {
+        categories.map(cat => (
+          <li onClick={ () => setHandleCategory(cat) }>{ cat }</li>
+        ))
+      }
     </ul>
+    <div className='layout--dropdown' onClick={ handleIsOpen }></div>
+    </>
   )
 }

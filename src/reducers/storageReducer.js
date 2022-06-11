@@ -7,7 +7,8 @@ const {
   comment_post,
   reply_comment,
   vote,
-  vote_remove
+  vote_remove,
+  add_new_feedback
 } = types
 
 const currentUser = {
@@ -44,6 +45,9 @@ export const storageReducer = ( state = [], action ) => {
             return item
           }
         })
+
+        case add_new_feedback:
+          return [{ ...action.payload, id: random() }, ...state ]
     default: 
       return state
   }
