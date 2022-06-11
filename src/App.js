@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { storageData } from "./actions/storageData.js";
 import { data_json } from "./constants/data_json.js";
@@ -16,13 +16,19 @@ export const App = () => {
   useEffect(() => {
     dataStored.length === 0 && dispatch(storageData(data_json.productRequests) )
   }, [])
+  const [replyTextBox, setReplyTextBox] = useState(false)
 
+  const handleReplyTextBox = () => {
+    setReplyTextBox(!replyTextBox)
+  }
   const postRef = useRef()
   
   return (
     <div className="App">
       <ContextData.Provider value={{
-        postRef
+        postRef,
+        handleReplyTextBox,
+        replyTextBox
       }}>
         <RouterApp />
       </ContextData.Provider>

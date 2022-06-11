@@ -5,10 +5,11 @@ import { ContextData } from '../../context/context';
 export const CommentHeader = ({ user }) => {
   const { image, name, username } = user;
   const data = useSelector(state => state.feedback_reducer)
-  const { postRef } = useContext(ContextData)
-  const handleReply = () => {
-    postRef.current.focus();
-  }
+  const { postRef, handleReplyTextBox } = useContext(ContextData)
+  // const handleReply = () => {
+  //   postRef.current.focus();
+  //   handleReplyTextBox
+  // }
   return (
     <div className='comment__header'>
       <div className='comment__user'>
@@ -21,7 +22,7 @@ export const CommentHeader = ({ user }) => {
         </h4>
       </div>
 
-      <button className='btn default--1' onClick={ handleReply }>Reply</button>
+      <button className='btn default--1' onClick={ handleReplyTextBox }>Reply</button>
     </div>
   )
 }

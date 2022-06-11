@@ -4,18 +4,18 @@
   h2 {
     margin-bottom: 2rem;
   }
-  textarea {
-    width: 100%;
-    min-height: 8rem;
-  }
-
+  
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
   }
-
+  
+}
+.text-area {
+  width: 100%;
+  min-height: 8rem;
 }
 
 .actions__feedback__form {

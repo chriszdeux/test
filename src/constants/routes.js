@@ -10,18 +10,23 @@ export const routes = [
     component: <Home /> 
   },
   { 
+    page: '',
+    route: '/test',
+    component: <Home /> 
+  },
+  { 
     page: 'New Feedback',
-    route: '/add-feedback',
+    route: '/test/add-feedback',
     component: <NewFeedback /> 
   },
   { 
     page: 'Edit Feedback',
-    route: '/edit-feedback',
+    route: '/test/edit-feedback',
     component: <EditFeedbackForm /> 
   },
   { 
     page: 'Feedback',
-    route: '/feedback',
+    route: '/test/feedback',
     component: <FeedbackDetails /> 
   },
 ]

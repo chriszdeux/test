@@ -7,7 +7,7 @@ export const GoBack = () => {
   const navigate = useNavigate()
 
   const goHome = () => {
-    navigate('/')
+    navigate('/test')
   }
   return (
     <button className='btn default--1' onClick={goHome}>

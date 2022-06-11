@@ -8,7 +8,7 @@ import { useForm } from '../../hooks/useForm'
 export const FormPostComment = () => {
 
   const data = useSelector(state => state.feedback_reducer)
-  const { postRef } = useContext(ContextData)
+
   const { inputValues, handleOnChange, charactersLeft } = useForm()
   const { post } = inputValues
   const { comments } = data && data
@@ -32,8 +32,8 @@ export const FormPostComment = () => {
   return (
     <form className='comment__form'>
       <h2>Add Comment</h2>
-      <textarea 
-      ref={ postRef }
+      <textarea className='text-area'
+      // ref={ postRef }
         name="post"
         value={ post }
         onChange={ handleOnChange }

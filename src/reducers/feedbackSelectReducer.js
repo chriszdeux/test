@@ -12,12 +12,17 @@ export const feedbackSelectReducer = ( state = {}, action ) => {
       return action.payload
 
       case comment_post:
-        // debugger
-        return {...state, comments: [...comments, { user: currentUser, id: random(), content: action.payload } ]}
+        debugger
+        if(comments) {
+          // debugger
+          return {...state, comments: [...comments, { user: currentUser, id: random(), content: action.payload } ]}
+        } else {
+          // debugger
+          return {...state, comments: [{ user: currentUser, id: random(), content: action.payload } ]}
+        }
 
 
       case reply_comment:
-        debugger
       case clean_memory_feedback:
         return {}
     default:

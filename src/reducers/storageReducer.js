@@ -27,9 +27,10 @@ export const storageReducer = ( state = [], action ) => {
       //   user: currentUser,
       //   content: 
       // }
+      // debugger
       const a = state.map(item => {
         if(item.id === action.payload.id) {
-          // debugger
+          debugger
           return action.payload
         } else {
           // debugger

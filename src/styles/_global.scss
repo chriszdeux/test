@@ -77,3 +77,12 @@ textarea {
     @include inputs(); 
 }
 
+.planned-color {
+    background-color: $peach-color,
+}
+.in-progress-color {
+    background-color: $purple-color,
+}
+.live-color {
+    background-color: $ligh-blue-color,
+}

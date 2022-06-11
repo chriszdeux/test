@@ -24,6 +24,7 @@ export const filterReducer = ( state = [], action ) => {
       return action.payload.filter(item => item.category === action.type)
 
     case filter_ux:
+      // debugger
       return action.payload.filter(item => item.category === action.type)      
     
     case filter_enhancement:

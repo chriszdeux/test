@@ -14,7 +14,7 @@ export const CardInteraction = ({ post }) => {
   
   const handleFeedback = () => {
     dispatch(feedbackSelected(post))
-    navigate('/feedback')
+    navigate('/test/feedback')
   }
   return (
     <div className='card__interaction'>

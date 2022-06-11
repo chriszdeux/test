@@ -4,8 +4,8 @@ import { RoadMap } from '../suggestions/RoadMap'
 import { SuggesstionsList } from '../suggestions/SuggesstionsList'
 
 export const TabletHeader = () => {
-  const storageData = useSelector(state => state.storage_reducer)
-  const { productRequests:data } = storageData.length > 0 && storageData[0]
+  const data = useSelector(state => state.storage_reducer)
+  // const { productRequests:data } = storageData.length > 0 && storageData[0]
  
   return (
     <div className='tablet__header'>
