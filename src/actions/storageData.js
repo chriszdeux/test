@@ -43,3 +43,11 @@ export const addNewFeedback = ( data ) => {
     payload: data
   }
 }
+
+export const deleteFeedback = ( data ) => {
+  return {
+    type: types.delete_feedback,
+    payload: data
+  }
+}
+

@@ -24,11 +24,11 @@ export const RoadMap = () => {
             <h3>{ planned.length }</h3>
           </li>
           <li>
-            <p className="text--2"> <strong className='in-progress-color'></strong> Planed</p>      
+            <p className="text--2"> <strong className='in-progress-color'></strong> In-Progress</p>      
             <h3>{ inProgress.length }</h3>
           </li>
           <li>
-            <p className="text--2"> <strong className='live-color'></strong> Planed</p>      
+            <p className="text--2"> <strong className='live-color'></strong> Live</p>      
             <h3>{ live.length }</h3>
           </li>
       </ul>

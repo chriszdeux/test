@@ -41,12 +41,14 @@ export const AddFeedbackForm = () => {
 
   
   useEffect(() => {
-    if(title_feedback.length < 10 || post.length < 10 || handleCategory.length < 1) {
+    if(title_feedback.length < 5 || post.length < 5 || handleCategory.length < 1) {
       refButton.current.disabled = true
     } else { 
       refButton.current.disabled = false
     }
 }, [ title_feedback.length, post.length, handleCategory.length ])
+
+
   const handleSubmit = (e) => {
     // debugger
     e.preventDefault();
@@ -54,6 +56,9 @@ export const AddFeedbackForm = () => {
     setTimeout(() => {
       navigate('/test')
     }, 1000);
+
+
+
     // if( title_feedback.length > 10 && post.length > 20 && handleCategory.length > 0 ) {
     // }
   }

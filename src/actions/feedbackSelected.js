@@ -24,3 +24,10 @@ export const feedbackReply = (  data ) => {
     payload: data
   }
 }
+
+export const feedbackEdit = ( data ) => {
+  return {
+    type: types.edit_feedback,
+    payload: data
+  }
+}

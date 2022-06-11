@@ -8,7 +8,9 @@ const {
   reply_comment,
   vote,
   vote_remove,
-  add_new_feedback
+  add_new_feedback,
+  edit_feedback,
+  delete_feedback
 } = types
 
 const currentUser = {
@@ -29,25 +31,28 @@ export const storageReducer = ( state = [], action ) => {
         return item.id === action.payload.id ?action.payload : item
       })
 
-      case vote:
-        return state.map(item => {
-          if(item.id === action.payload.id) {
-            return { ...action.payload, upvotes: action.payload.upvotes + 1, voted: true }
-          } else {
-            return item
-          }
-        })
-      case vote_remove:
-        return state.map(item => {
-          if(item.id === action.payload.id) {
-            return { ...action.payload, upvotes: action.payload.upvotes - 1, voted: false }
-          } else {
-            return item
-          }
-        })
+    case vote:
+      return state.map(item => {
+        if(item.id === action.payload.id) {
+          return { ...action.payload, upvotes: action.payload.upvotes + 1, voted: true }
+        } else {
+          return item
+        }
+      })
+    case vote_remove:
+      return state.map(item => {
+        if(item.id === action.payload.id) {
+          return { ...action.payload, upvotes: action.payload.upvotes - 1, voted: false }
+        } else {
+          return item
+        }
+      })
 
-        case add_new_feedback:
-          return [{ ...action.payload, id: random() }, ...state ]
+    case add_new_feedback:
+      return [{ ...action.payload, id: random() }, ...state ]
+    
+    case delete_feedback:
+      return state.filter(item => item.id !== action.payload)
     default: 
       return state
   }
