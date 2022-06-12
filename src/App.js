@@ -16,19 +16,25 @@ export const App = () => {
   useEffect(() => {
     dataStored.length === 0 && dispatch(storageData(data_json.productRequests) )
   }, [])
-  const [replyTextBox, setReplyTextBox] = useState(false)
 
-  const handleReplyTextBox = () => {
-    setReplyTextBox(!replyTextBox)
+  const [showReplyBox, setShowReplyBox] = useState(false)
+  const [handleReply, setHandleReply] = useState({})
+
+
+  const handleShowReplyBox = (data) => {
+    setHandleReply(data)
+    setShowReplyBox(!showReplyBox)
   }
+
   const postRef = useRef()
   
   return (
     <div className="App">
       <ContextData.Provider value={{
         postRef,
-        handleReplyTextBox,
-        replyTextBox
+        handleShowReplyBox,
+        showReplyBox,
+        handleReply,
       }}>
         <RouterApp />
       </ContextData.Provider>

@@ -2,10 +2,12 @@ import React, { lazy, useContext, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { ContextData } from '../../context/context';
 
-export const CommentHeader = ({ user }) => {
+export const ReplyHeader = ({ reply }) => {
   const { handleShowReplyBox, handleReply } = useContext(ContextData)
-
-  const { image, name, username } = user 
+  // debugger
+  const { user } = reply !== undefined && reply
+  // debugger
+  const { image, name, username } = user !== undefined && user;
   // debugger
     const data = useSelector(state => state.feedback_reducer)
   // const handleReply = () => {
@@ -25,7 +27,7 @@ export const CommentHeader = ({ user }) => {
         </h4>
       </div>
 
-      <button className='btn default--1' onClick={ () => handleShowReplyBox(user) }>Reply</button>
+      <button className='btn default--1' onClick={ () => handleShowReplyBox(reply) }>Reply</button>
     </div>
   )
 }

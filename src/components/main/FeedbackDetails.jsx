@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 
 export const FeedbackDetails = () => {
   const data = useSelector(state => state.feedback_reducer)
-  
+    
   return (
     <section className='feedback__details'>
       <FeedbackDetailsHeader />

@@ -3,7 +3,7 @@ import { useState } from "react"
 export const useForm = () => {
   const [inputValues, setInputValues] = useState({
     post: '',
-    reply: '',
+    reply_comment: '',
     detail: '',
     title_feedback: '',
     categories: [

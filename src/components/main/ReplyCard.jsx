@@ -2,28 +2,19 @@ import React, { useContext } from 'react'
 import { CommentHeader } from './CommentHeader'
 import { ContextData } from '../../context/context'
 import { useForm } from '../../hooks/useForm'
+import { ReplyHeader } from './ReplyHeader'
 export const ReplyCard = ({ reply }) => {
-  const { content, replyingTo, user } = reply
+  const { content, replyingTo, user } = reply && reply
   // debugger
-  const { replyTextBox } = useContext( ContextData )
-  const { inputValues, handleOnChange, charactersLeft  } = useForm()
-  const { reply:replyInput } = inputValues
+  // debugger
   return (
     <article className='comment__card reply'>
-      <CommentHeader user={ user }/>
+      <ReplyHeader reply={ reply}/>
       <p className='text--1'>
         <strong>@{replyingTo}</strong>
         { content }
       </p>
-      {
-        replyTextBox && 
-        <textarea className='text-area'
-            name="reply"
-            value={ replyInput }
-            onChange={ handleOnChange }
-            placeholder='Type your comment here'
-          ></textarea>
-      }
+     
     </article>
   )
 }

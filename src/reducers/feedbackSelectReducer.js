@@ -33,6 +33,14 @@ export const feedbackSelectReducer = ( state = {}, action ) => {
       }
 
     case reply_comment:
+      const newReply = {
+        id: random(),
+        user: currentUser,
+        content: action.payload
+      }
+      // debugger
+      // return {...state, }
+      debugger
     case clean_memory_feedback:
       return {}
     default:

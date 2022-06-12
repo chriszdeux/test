@@ -53,9 +53,11 @@
     // justify-content: center;
   }
   .actions__feedback__form {
- 
+    width: 69rem;
+    margin: 0 auto;
     padding-right: 2rem;
     padding-left: 2rem;
+    margin-top: 7.2rem;
     .submit__buttons {
       display: flex;
       flex-direction: row-reverse;

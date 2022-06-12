@@ -13,7 +13,7 @@ export const FormPostComment = () => {
   const { post } = inputValues
   const { comments } = data && data
   const dispatch = useDispatch()
-
+  
   const SubmitComment = (e) => {
     e.preventDefault()
     dispatch(feedbackPost(post))
